@@ -1,0 +1,18 @@
+﻿@model IndexViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<table>
+    @foreach (var forecast in Model.Forecasts)
+    {
+        <tr>
+            <td>@forecast.TemperatureC</td>
+            <td>@forecast.TemperatureF</td>
+            <td>@forecast.Date</td>
+            <td>@forecast.Summary</td>
+        </tr>
+    }
+</table>

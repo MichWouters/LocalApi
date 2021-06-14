@@ -41,6 +41,32 @@ namespace LocalApi_NoAuthentication.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Forecasts");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Date = new DateTime(2021, 6, 15, 16, 8, 56, 391, DateTimeKind.Local).AddTicks(1393),
+                            Summary = "Scorching",
+                            TemperatureC = 28,
+                            UserId = 0
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Date = new DateTime(2021, 6, 16, 16, 8, 56, 393, DateTimeKind.Local).AddTicks(211),
+                            Summary = "Chilly",
+                            TemperatureC = 12,
+                            UserId = 0
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Date = new DateTime(2021, 6, 17, 16, 8, 56, 393, DateTimeKind.Local).AddTicks(234),
+                            Summary = "Warm",
+                            TemperatureC = 21,
+                            UserId = 0
+                        });
                 });
 #pragma warning restore 612, 618
         }

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace LocalApi_NoAuthentication.Migrations
 {
-    public partial class init : Migration
+    public partial class seeddata : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -22,6 +22,21 @@ namespace LocalApi_NoAuthentication.Migrations
                 {
                     table.PrimaryKey("PK_Forecasts", x => x.Id);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Forecasts",
+                columns: new[] { "Id", "Date", "Summary", "TemperatureC", "UserId" },
+                values: new object[] { 1, new DateTime(2021, 6, 15, 16, 8, 56, 391, DateTimeKind.Local).AddTicks(1393), "Scorching", 28, 0 });
+
+            migrationBuilder.InsertData(
+                table: "Forecasts",
+                columns: new[] { "Id", "Date", "Summary", "TemperatureC", "UserId" },
+                values: new object[] { 2, new DateTime(2021, 6, 16, 16, 8, 56, 393, DateTimeKind.Local).AddTicks(211), "Chilly", 12, 0 });
+
+            migrationBuilder.InsertData(
+                table: "Forecasts",
+                columns: new[] { "Id", "Date", "Summary", "TemperatureC", "UserId" },
+                values: new object[] { 3, new DateTime(2021, 6, 17, 16, 8, 56, 393, DateTimeKind.Local).AddTicks(234), "Warm", 21, 0 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

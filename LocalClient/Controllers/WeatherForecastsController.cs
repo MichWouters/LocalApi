@@ -6,11 +6,14 @@ using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LocalClient.Controllers
 {
+    [Authorize]
     public class WeatherForecastsController : Controller
     {
+        [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
             var url = "https://localhost:44372/WeatherForecast";

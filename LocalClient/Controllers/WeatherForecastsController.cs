@@ -11,7 +11,6 @@ namespace LocalClient.Controllers
 {
     public class WeatherForecastsController : Controller
     {
-        // GET: WeatherForecasts
         public async Task<IActionResult> Index()
         {
             var url = "https://localhost:44372/WeatherForecast";
@@ -23,7 +22,6 @@ namespace LocalClient.Controllers
             return View(result);
         }
 
-        // GET: WeatherForecasts/Create
         public IActionResult Create()
         {
             return View();

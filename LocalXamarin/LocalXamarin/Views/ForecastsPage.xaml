@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LocalXamarin.Views.ForecastsPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:LocalXamarin.ViewModels"  
+             xmlns:model="clr-namespace:LocalXamarin.Models"  
+             x:Name="Forecasts">
+
+    <RefreshView x:DataType="local:ForecastsViewModel"
+                 Command="{Binding LoadItemsCommand}"
+                 IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <CollectionView x:Name="ForecastListView"
+                        ItemsSource="{Binding Items}"
+                        SelectedItem="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10" x:DataType="model:WeatherForecast">
+                        <Label Text="{Binding Date}" />
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding TemperatureC}" />
+                            <Label Text="{Binding Summary}" />
+                        </StackLayout>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView>
+</ContentPage>

@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocalClient", "LocalClient\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocalApi_NoAuthentication", "LocalApi_NoAuthentication\LocalApi_NoAuthentication.csproj", "{09817F46-4772-431D-8B09-8F4F4824A17C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalXamarin.Android", "LocalXamarin\LocalXamarin.Android\LocalXamarin.Android.csproj", "{7BAC15EC-602D-41B7-9A39-BB0E0FAE5190}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalXamarin", "LocalXamarin\LocalXamarin\LocalXamarin.csproj", "{B0AA145E-2B0F-4399-8A26-D0E433F8A1E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,16 @@ Global
 		{09817F46-4772-431D-8B09-8F4F4824A17C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09817F46-4772-431D-8B09-8F4F4824A17C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09817F46-4772-431D-8B09-8F4F4824A17C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BAC15EC-602D-41B7-9A39-BB0E0FAE5190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BAC15EC-602D-41B7-9A39-BB0E0FAE5190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BAC15EC-602D-41B7-9A39-BB0E0FAE5190}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7BAC15EC-602D-41B7-9A39-BB0E0FAE5190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BAC15EC-602D-41B7-9A39-BB0E0FAE5190}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BAC15EC-602D-41B7-9A39-BB0E0FAE5190}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B0AA145E-2B0F-4399-8A26-D0E433F8A1E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0AA145E-2B0F-4399-8A26-D0E433F8A1E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0AA145E-2B0F-4399-8A26-D0E433F8A1E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0AA145E-2B0F-4399-8A26-D0E433F8A1E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LocalApi_NoAuthentication.Migrations
 {
     [DbContext(typeof(ApiContext))]
-    [Migration("20210614140856_seeddata")]
-    partial class seeddata
+    [Migration("20210616064935_data")]
+    partial class data
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -37,8 +37,8 @@ namespace LocalApi_NoAuthentication.Migrations
                     b.Property<int>("TemperatureC")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                    b.Property<string>("User")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -48,26 +48,23 @@ namespace LocalApi_NoAuthentication.Migrations
                         new
                         {
                             Id = 1,
-                            Date = new DateTime(2021, 6, 15, 16, 8, 56, 391, DateTimeKind.Local).AddTicks(1393),
+                            Date = new DateTime(2021, 6, 17, 8, 49, 35, 273, DateTimeKind.Local).AddTicks(6343),
                             Summary = "Scorching",
-                            TemperatureC = 28,
-                            UserId = 0
+                            TemperatureC = 28
                         },
                         new
                         {
                             Id = 2,
-                            Date = new DateTime(2021, 6, 16, 16, 8, 56, 393, DateTimeKind.Local).AddTicks(211),
+                            Date = new DateTime(2021, 6, 18, 8, 49, 35, 275, DateTimeKind.Local).AddTicks(4395),
                             Summary = "Chilly",
-                            TemperatureC = 12,
-                            UserId = 0
+                            TemperatureC = 12
                         },
                         new
                         {
                             Id = 3,
-                            Date = new DateTime(2021, 6, 17, 16, 8, 56, 393, DateTimeKind.Local).AddTicks(234),
+                            Date = new DateTime(2021, 6, 19, 8, 49, 35, 275, DateTimeKind.Local).AddTicks(4420),
                             Summary = "Warm",
-                            TemperatureC = 21,
-                            UserId = 0
+                            TemperatureC = 21
                         });
                 });
 #pragma warning restore 612, 618

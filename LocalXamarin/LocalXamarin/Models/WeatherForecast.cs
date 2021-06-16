@@ -4,6 +4,10 @@ namespace LocalXamarin.Models
 {
     public class WeatherForecast
     {
+        public string Id { get; set; }
+
+        public string User { get; set; }
+
         public DateTime Date { get; set; }
 
         public int TemperatureC { get; set; }

@@ -6,7 +6,7 @@ namespace LocalApi_NoAuthentication
     {
         public int Id { get; set; }
 
-        public int UserId { get; set; }
+        public string User { get; set; }
 
         public DateTime Date { get; set; }
 

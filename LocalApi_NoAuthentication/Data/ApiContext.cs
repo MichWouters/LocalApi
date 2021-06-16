@@ -21,6 +21,7 @@ namespace LocalApi_NoAuthentication.Data
                     new WeatherForecast
                     {
                         Id = 1,
+                        User = "Admin",
                         Summary = "Scorching",
                         Date = DateTime.Now.AddDays(1),
                         TemperatureC = 28
@@ -28,6 +29,7 @@ namespace LocalApi_NoAuthentication.Data
                     new WeatherForecast
                     {
                         Id = 2,
+                        User = "Admin",
                         Summary = "Chilly",
                         Date = DateTime.Now.AddDays(2),
                         TemperatureC = 12
@@ -35,6 +37,7 @@ namespace LocalApi_NoAuthentication.Data
                     new WeatherForecast
                     {
                         Id = 3,
+                        User = "Admin",
                         Summary = "Warm",
                         Date = DateTime.Now.AddDays(3),
                         TemperatureC = 21

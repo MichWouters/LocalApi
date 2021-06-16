@@ -1,23 +1,23 @@
-﻿using LocalClient.Models;
+﻿using System;
+using LocalClient.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using System;
-using System.Net.Http;
 using System.Security.Authentication;
-using System.Text;
 using System.Threading.Tasks;
 using LocalClient.Services;
+using Microsoft.Extensions.Logging;
 
 namespace LocalClient.Controllers
 {
     [Authorize]
     public class WeatherForecastsController : Controller
     {
-        private IWeatherForecastService _service;
-        public WeatherForecastsController(IWeatherForecastService service)
+        private readonly IWeatherForecastService _service;
+        private readonly ILogger _logger;
+        public WeatherForecastsController(IWeatherForecastService service, ILogger<WeatherForecastsController> logger)
         {
             _service = service;
+            _logger = logger;
         }
 
         [AllowAnonymous]
@@ -42,6 +42,7 @@ namespace LocalClient.Controllers
             weatherForecast.User = User.Identity.Name;
             await _service.AddWeatherForecastAsync(weatherForecast);
 
+            _logger.LogInformation($@"{DateTime.Now}: User {User.Identity.Name} has added a new forecast");
             return RedirectToAction(nameof(Index));
         }
     }

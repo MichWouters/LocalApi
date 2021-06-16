@@ -46,23 +46,26 @@ namespace LocalApi_NoAuthentication.Migrations
                         new
                         {
                             Id = 1,
-                            Date = new DateTime(2021, 6, 17, 8, 49, 35, 273, DateTimeKind.Local).AddTicks(6343),
+                            Date = new DateTime(2021, 6, 17, 13, 17, 24, 590, DateTimeKind.Local).AddTicks(638),
                             Summary = "Scorching",
-                            TemperatureC = 28
+                            TemperatureC = 28,
+                            User = "Admin"
                         },
                         new
                         {
                             Id = 2,
-                            Date = new DateTime(2021, 6, 18, 8, 49, 35, 275, DateTimeKind.Local).AddTicks(4395),
+                            Date = new DateTime(2021, 6, 18, 13, 17, 24, 591, DateTimeKind.Local).AddTicks(9038),
                             Summary = "Chilly",
-                            TemperatureC = 12
+                            TemperatureC = 12,
+                            User = "Admin"
                         },
                         new
                         {
                             Id = 3,
-                            Date = new DateTime(2021, 6, 19, 8, 49, 35, 275, DateTimeKind.Local).AddTicks(4420),
+                            Date = new DateTime(2021, 6, 19, 13, 17, 24, 591, DateTimeKind.Local).AddTicks(9062),
                             Summary = "Warm",
-                            TemperatureC = 21
+                            TemperatureC = 21,
+                            User = "Admin"
                         });
                 });
 #pragma warning restore 612, 618

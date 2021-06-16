@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace LocalApi_NoAuthentication.Migrations
 {
-    public partial class data : Migration
+    public partial class SampleProject : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -26,17 +26,17 @@ namespace LocalApi_NoAuthentication.Migrations
             migrationBuilder.InsertData(
                 table: "Forecasts",
                 columns: new[] { "Id", "Date", "Summary", "TemperatureC", "User" },
-                values: new object[] { 1, new DateTime(2021, 6, 17, 8, 49, 35, 273, DateTimeKind.Local).AddTicks(6343), "Scorching", 28, null });
+                values: new object[] { 1, new DateTime(2021, 6, 17, 13, 17, 24, 590, DateTimeKind.Local).AddTicks(638), "Scorching", 28, "Admin" });
 
             migrationBuilder.InsertData(
                 table: "Forecasts",
                 columns: new[] { "Id", "Date", "Summary", "TemperatureC", "User" },
-                values: new object[] { 2, new DateTime(2021, 6, 18, 8, 49, 35, 275, DateTimeKind.Local).AddTicks(4395), "Chilly", 12, null });
+                values: new object[] { 2, new DateTime(2021, 6, 18, 13, 17, 24, 591, DateTimeKind.Local).AddTicks(9038), "Chilly", 12, "Admin" });
 
             migrationBuilder.InsertData(
                 table: "Forecasts",
                 columns: new[] { "Id", "Date", "Summary", "TemperatureC", "User" },
-                values: new object[] { 3, new DateTime(2021, 6, 19, 8, 49, 35, 275, DateTimeKind.Local).AddTicks(4420), "Warm", 21, null });
+                values: new object[] { 3, new DateTime(2021, 6, 19, 13, 17, 24, 591, DateTimeKind.Local).AddTicks(9062), "Warm", 21, "Admin" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
